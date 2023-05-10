@@ -70,6 +70,13 @@ view: order_items {
     sql: ${sale_price} ;;
   }
 
+  measure: total_sale_price_in_M {
+    type: sum
+    sql: ${sale_price} ;;
+    value_format: "0.000,,\" M\""
+    html: {{ rendered_value }} | {{total_sale_price._rendered_value }} ;;
+  }
+
   measure: average_sale_price {
     type: average
     sql: ${sale_price} ;;
