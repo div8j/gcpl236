@@ -64,6 +64,12 @@ view: users {
     sql: ${TABLE}.created_at ;;
   }
 
+  dimension: user_date {
+    type: date_time
+    sql: ${TABLE}.created_at;;
+    #html: {{ rendered_value | date: "%m/%d/%Y" }} ;;
+  }
+
   dimension: email {
     type: string
     sql: ${TABLE}.email ;;
