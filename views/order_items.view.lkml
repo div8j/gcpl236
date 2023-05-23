@@ -76,6 +76,12 @@ view: order_items {
     sql: ${sale_price} ;;
   }
 
+  measure: total_sale_price_euro {
+    type: sum
+    sql: ${sale_price} ;;
+    value_format: "\"€\"0"
+  }
+
   measure: total_sale_price_in_M {
     type: sum
     sql: ${sale_price} ;;
