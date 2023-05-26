@@ -175,6 +175,14 @@ view: users {
     sql: ${TABLE}.zip ;;
   }
 
+  dimension: buttonValue {
+    type: string
+    link: {
+      label: "Test"
+      url: "https://gcpl236.cloud.looker.com/dashboards/261?State={{ _filters['users.state'] | url_encode }}"
+    }
+  }
+
   measure: count {
     type: count
     drill_fields: [detail*]
