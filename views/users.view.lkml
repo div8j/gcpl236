@@ -148,6 +148,7 @@ view: users {
   dimension: email {
     type: string
     sql: ${TABLE}.email ;;
+    order_by_field: id
   }
 
   dimension: first_name {
