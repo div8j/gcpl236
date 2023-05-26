@@ -168,6 +168,10 @@ view: users {
   dimension: state {
     type: string
     sql: ${TABLE}.state ;;
+    link: {
+      label: "Test"
+      url: "https://gcpl236.cloud.looker.com/dashboards/261?State={{ _filters['users.state'] | url_encode }}"
+    }
   }
 
   dimension: zip {
@@ -175,8 +179,7 @@ view: users {
     sql: ${TABLE}.zip ;;
   }
 
-  dimension: buttonValue {
-    type: string
+  dimension: passValue {
     link: {
       label: "Test"
       url: "https://gcpl236.cloud.looker.com/dashboards/261?State={{ _filters['users.state'] | url_encode }}"
