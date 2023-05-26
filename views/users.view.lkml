@@ -180,6 +180,8 @@ view: users {
   }
 
   dimension: passValue {
+    type: string
+    sql: "Data Value" ;;
     link: {
       label: "Test"
       url: "https://gcpl236.cloud.looker.com/dashboards/261?State={{ _filters['users.state'] | url_encode }}"
