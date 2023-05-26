@@ -188,6 +188,15 @@ view: users {
     }
   }
 
+  dimension: passValue1 {
+    type: string
+    sql: "Data Value LookML" ;;
+    link: {
+      label: "Test"
+      url: "https://gcpl236.cloud.looker.com/dashboards/ecommerce_divakar::secondarydashboard?State={{ _filters['users.state'] | url_encode }}"
+    }
+  }
+
   measure: count {
     type: count
     drill_fields: [detail*]
